@@ -13,7 +13,7 @@
 #include <string>
 #include <vector>
 
-#ifdef _WIN32 || _WIN64
+#if defined(_WIN64) || defined(_WIN32)
 #include <windows.h> // to avoid gl.h win-type issue
 #define __OR_VIDEO_FORMAT ".mp4"
 #else
