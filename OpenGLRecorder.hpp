@@ -28,7 +28,7 @@ public:
 
         int fourcc = cv::VideoWriter::fourcc('X', '2', '6', '4'); // x264 is a opensource impl for H.264
 
-        auto videoFileName = autoDetectFormat ? __mFileName : __mFileName + ".mkv";
+        auto videoFileName = autoDetectFormat ? __mFileName : __mFileName + ".mp4"; // ".mkv";
 
         __mVideoWriter.open(videoFileName, fourcc, FPS, cv::Size(W, H), true);
 
