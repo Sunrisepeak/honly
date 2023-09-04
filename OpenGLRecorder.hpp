@@ -13,6 +13,13 @@
 #include <string>
 #include <vector>
 
+#ifdef _WIN32 || _WIN64
+#include <windows.h> // to avoid gl.h win-type issue
+#define __OR_VIDEO_FORMAT ".mp4"
+#else
+#define __OR_VIDEO_FORMAT ".mkv"
+#endif
+
 #include <GL/gl.h>
 #include <GL/glu.h>
 
@@ -28,7 +35,7 @@ public:
 
         int fourcc = cv::VideoWriter::fourcc('X', '2', '6', '4'); // x264 is a opensource impl for H.264
 
-        auto videoFileName = autoDetectFormat ? __mFileName : __mFileName + ".mp4"; // ".mkv";
+        auto videoFileName = autoDetectFormat ? __mFileName : __mFileName + __OR_VIDEO_FORMAT;
 
         __mVideoWriter.open(videoFileName, fourcc, FPS, cv::Size(W, H), true);
 

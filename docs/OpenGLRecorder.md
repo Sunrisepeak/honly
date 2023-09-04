@@ -145,7 +145,6 @@ while (flag) {
 #### 4.1 源码 - `examples/xr-opengl-recorder.cpp`
 
 ```cpp
-#include <GL/gl.h>
 #include <GLFW/glfw3.h>
 
 #include <OpenGLRecorder.hpp>
