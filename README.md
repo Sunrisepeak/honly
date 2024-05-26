@@ -9,5 +9,5 @@ HOnly 是一个C++**独立文件/模块**库集合
 | 库                                        | 版本信息    | 类型      | 依赖           | 描述                                        | 文档     |
 | ---------------------------------------- | ---------- | --------- | ------------- | ------------------------------------------- | -------- |
 | [honly_opengl_recorder.hpp](honly_opengl_recorder.hpp) | pre-v0.0.1 | 图片/视频  | OpenCV/OpenGL | 用于捕获/录制/显示OpenGL帧缓冲区, 生成图片或视频 | [Docs](docs/OpenGLRecorder.md) |
-| [honly_logger.hpp](honly_logger.hpp) | pre-v0.0.1 | 日志  | 无 | 打印不同级别的日志消息 | |
+| [honly_logmacro.hpp](honly_logmacro.hpp) | pre-v0.0.1 | 日志  | 无 | 日志分级打印宏工具库 | |
 

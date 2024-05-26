@@ -16,6 +16,6 @@ target("honly-opengl-recorder")
     add_files("opengl_recorder.cpp")
     add_packages("glfw")
 
-target("honly-logger")
+target("honly-logmacro")
     set_kind("binary")
-    add_files("logger.cpp")
+    add_files("logmacro.cpp")
