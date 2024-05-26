@@ -1,6 +1,6 @@
 #include <GLFW/glfw3.h>
 
-#include <OpenGLRecorder.hpp>
+#include "honly_opengl_recorder.hpp"
 
 int main() {
     if (!glfwInit()) {
@@ -15,7 +15,7 @@ int main() {
 
     glfwMakeContextCurrent(window);
 
-    xrecorder::OpenGLRecorder<1920, 1080> xr;
+    honly::OpenGLRecorder<1920, 1080> xr;
 
     unsigned char i = 0;
     

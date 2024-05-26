@@ -1,7 +1,6 @@
 add_rules("mode.debug", "mode.release")
 
 add_requires("glfw 3.3.4")
-add_requires("opencv 4.6.0")
 
 add_includedirs("../")
 
@@ -12,7 +11,11 @@ if is_host("linux") then
     add_links("opencv_imgproc", "opencv_videoio", "opencv_imgcodecs")
 end
 
-target("xrecorder-opengl")
+target("honly-opengl-recorder")
     set_kind("binary")
-    add_files("xr-opengl-recorder.cpp")
-    add_packages("glfw", "opencv")
+    add_files("opengl_recorder.cpp")
+    add_packages("glfw")
+
+target("honly-logger")
+    set_kind("binary")
+    add_files("logger.cpp")

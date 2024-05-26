@@ -4,20 +4,20 @@
 // Copyright (C) 2023 - present  Sunrisepeak
 //
 // Author: Sunrisepeak (speakshen@163.com)
-// ProjectLinks: https://github.com/Sunrisepeak/XRecorder
+// ProjectLinks: https://github.com/Sunrisepeak/honly
 //
 
-#ifndef __OPENGL_RECORDER_HPP__XRECORDER
-#define __OPENGL_RECORDER_HPP__XRECORDER
+#ifndef OPENGL_RECORDER_HPP_honly
+#define OPENGL_RECORDER_HPP_honly
 
 #include <string>
 #include <vector>
 
 #if defined(_WIN64) || defined(_WIN32)
 #include <windows.h> // to avoid gl.h win-type issue
-#define __OR_VIDEO_FORMAT ".mp4"
+#define OR_VIDEO_FORMAT ".mp4"
 #else
-#define __OR_VIDEO_FORMAT ".mkv"
+#define OR_VIDEO_FORMAT ".mkv"
 #endif
 
 #include <GL/gl.h>
@@ -25,17 +25,17 @@
 
 #include <opencv2/opencv.hpp>
 
-namespace xrecorder {
+namespace honly {
 
 template <uint32_t W, uint32_t H, uint8_t FPS = 60>
 class OpenGLRecorder {
 public:
-    OpenGLRecorder(std::string fileName = "xrecorder", bool autoDetectFormat = false) : __mFlip { true }, __mViewport { 0 } {
-        __mFileName = fileName == "" ? "xrecorder" : fileName;
+    OpenGLRecorder(std::string fileName = "honly", bool autoDetectFormat = false) : __mFlip { true }, __mViewport { 0 } {
+        __mFileName = fileName == "" ? "honly" : fileName;
 
         int fourcc = cv::VideoWriter::fourcc('X', '2', '6', '4'); // x264 is a opensource impl for H.264
 
-        auto videoFileName = autoDetectFormat ? __mFileName : __mFileName + __OR_VIDEO_FORMAT;
+        auto videoFileName = autoDetectFormat ? __mFileName : __mFileName + OR_VIDEO_FORMAT;
 
         __mVideoWriter.open(videoFileName, fourcc, FPS, cv::Size(W, H), true);
 
@@ -170,6 +170,6 @@ private:
     }
 };
 
-} // xrecorder namespace end
+} // honly namespace end
 
 #endif
