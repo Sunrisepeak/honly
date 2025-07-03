@@ -19,3 +19,7 @@ target("honly-opengl-recorder")
 target("honly-logmacro")
     set_kind("binary")
     add_files("logmacro.cpp")
+
+target("honly-jiami")
+    set_kind("binary")
+    add_files("jiami.cpp")
