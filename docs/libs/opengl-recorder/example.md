@@ -1,10 +1,4 @@
-## XRecorder: OpenGLRecorder 文档
-
-| 库                                       | 版本信息   | 类型      | 依赖          | 描述                                             | 文档                           |
-| ---------------------------------------- | ---------- | --------- | ------------- | ------------------------------------------------ | ------------------------------ |
-| [OpenGLRecorder.hpp](OpenGLRecorder.hpp) | pre-v0.0.1 | 图片/视频 | OpenCV/OpenGL | 用于捕获/录制/显示OpenGL帧缓冲区, 生成图片或视频 | [Docs](docs/OpenGLRecorder.md) |
-
-
+# 使用示例
 
 ### 1.依赖&配置
 
@@ -190,7 +184,7 @@ int main() {
 
 #### 4.2 录制的视频文件 播放效果 - xrecorder.mkv
 
-![](imgs/xr-opengl-recorder.gif)
+![](/imgs/xr-opengl-recorder.gif)
 
 
 

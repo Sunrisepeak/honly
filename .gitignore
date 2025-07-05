@@ -35,3 +35,8 @@
 .vscode
 examples/build
 examples/.xmake
+
+# vitepress
+dist
+node_modules
+cache
